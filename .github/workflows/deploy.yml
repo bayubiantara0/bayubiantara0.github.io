@@ -24,22 +24,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify file exists
+      - name: Check if contact-form.js exists
         run: |
-          ls -la assets/js/
-          echo "Content before replacement:"
-          cat assets/js/contact-form.js
+          if [ -f "assets/js/contact-form.js" ]; then
+            echo "File exists"
+            echo "Content before replacement:"
+            cat assets/js/contact-form.js
+          else
+            echo "File does not exist!"
+            exit 1
+          fi
 
       - name: Replace EmailJS placeholders
         run: |
-          sed -i 's/EMAILJS_PUBLIC_KEY_PLACEHOLDER/${{ secrets.EMAILJS_PUBLIC_KEY }}/g' assets/js/contact-form.js
-          sed -i 's/EMAILJS_SERVICE_ID_PLACEHOLDER/${{ secrets.EMAILJS_SERVICE_ID }}/g' assets/js/contact-form.js
-          sed -i 's/EMAILJS_TEMPLATE_ID_PLACEHOLDER/${{ secrets.EMAILJS_TEMPLATE_ID }}/g' assets/js/contact-form.js
+          # Escape special characters in secrets and replace placeholders
+          sed -i "s/EMAILJS_PUBLIC_KEY_PLACEHOLDER/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" assets/js/contact-form.js
+          sed -i "s/EMAILJS_SERVICE_ID_PLACEHOLDER/${{ secrets.EMAILJS_SERVICE_ID }}/g" assets/js/contact-form.js
+          sed -i "s/EMAILJS_TEMPLATE_ID_PLACEHOLDER/${{ secrets.EMAILJS_TEMPLATE_ID }}/g" assets/js/contact-form.js
 
-      - name: Verify replacement
+      - name: Verify replacement worked
         run: |
           echo "Content after replacement:"
           cat assets/js/contact-form.js
+          echo "Checking if placeholders still exist:"
+          if grep -q "PLACEHOLDER" assets/js/contact-form.js; then
+            echo "WARNING: Some placeholders were not replaced!"
+            grep "PLACEHOLDER" assets/js/contact-form.js
+          else
+            echo "All placeholders successfully replaced!"
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
