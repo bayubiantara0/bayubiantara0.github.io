@@ -11,6 +11,9 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const fname = document.getElementById("fname").value.trim();
   const lname = document.getElementById("lname").value.trim();
   const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone")
+    ? document.getElementById("phone").value.trim()
+    : "";
   const message = document.getElementById("message").value.trim();
 
   if (!fname || !lname || !email || !message) {
@@ -30,12 +33,33 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   submitBtn.textContent = "Sending...";
   messageDiv.innerHTML = "";
 
+  // Add current date to form data
+  const currentDate = new Date().toLocaleString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
+
+  // Create form data object with all required fields
+  const templateParams = {
+    from_fname: fname,
+    from_lname: lname,
+    from_email: email,
+    from_phone: phone || "Not provided",
+    message: message,
+    current_date: currentDate,
+  };
+
   // Send email using EmailJS
   emailjs
-    .sendForm(
+    .send(
       "EMAILJS_SERVICE_ID_PLACEHOLDER",
       "EMAILJS_TEMPLATE_ID_PLACEHOLDER",
-      this
+      templateParams
     )
     .then(function () {
       messageDiv.innerHTML =
