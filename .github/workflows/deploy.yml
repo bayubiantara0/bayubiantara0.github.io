@@ -24,11 +24,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify file exists
+        run: |
+          ls -la assets/js/
+          echo "Content before replacement:"
+          cat assets/js/contact-form.js
+
       - name: Replace EmailJS placeholders
         run: |
           sed -i 's/EMAILJS_PUBLIC_KEY_PLACEHOLDER/${{ secrets.EMAILJS_PUBLIC_KEY }}/g' assets/js/contact-form.js
           sed -i 's/EMAILJS_SERVICE_ID_PLACEHOLDER/${{ secrets.EMAILJS_SERVICE_ID }}/g' assets/js/contact-form.js
           sed -i 's/EMAILJS_TEMPLATE_ID_PLACEHOLDER/${{ secrets.EMAILJS_TEMPLATE_ID }}/g' assets/js/contact-form.js
+
+      - name: Verify replacement
+        run: |
+          echo "Content after replacement:"
+          cat assets/js/contact-form.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
