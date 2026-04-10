@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------------------
+﻿/*-----------------------------------------------------------------------------------
 
 Theme Name: Gerold - Personal Portfolio HTML5 Template
 Theme URI: https://themejunction.net/html/gerold/demo/
@@ -49,20 +49,20 @@ Description: Gerold - Personal Portfolio HTML5 Template
 	/* ----------------------------------
    @color declaration
   ------------------------------------ */
-	--tj-body: #dddddd;
-	--tj-white: #ffffff;
-	--tj-black: #000000;
-	--tj-black-2: #050709;
-	--tj-heading-primary: #102039;
-	--tj-heading-secondary: #ea1826;
-	--tj-theme-primary: #8750f7;
-	--tj-theme-secondary: #2a1454;
-	--tj-theme-accent-1: #0f0715;
-	--tj-theme-accent-2: #140c1c;
-	--tj-grey-1: #747779;
-	--tj-grey-2: #d9d9d9;
-	--tj-grey-3: #dddddd;
-	--tj-grey-4: #22272c;
+	--tj-body: #475569;
+	--tj-white: #1e293b;
+	--tj-black: #ffffff;
+	--tj-black-2: #f8fafc;
+	--tj-heading-primary: #0f172a;
+	--tj-heading-secondary: #0ea5e9;
+	--tj-theme-primary: #0ea5e9;
+	--tj-theme-secondary: #06b6d4;
+	--tj-theme-accent-1: #ffffff;
+	--tj-theme-accent-2: #f1f5f9;
+	--tj-grey-1: #64748b;
+	--tj-grey-2: #cbd5e1;
+	--tj-grey-3: #e2e8f0;
+	--tj-grey-4: #f8fafc;
 	/* ----------------------------------
    @font weight declaration
   ------------------------------------ */
@@ -259,6 +259,7 @@ a h6:hover {
 }
 .tj-btn-primary:hover {
 	background-position: -100%;
+	box-shadow: 0 0 25px rgba(14, 165, 233, 0.5);
 }
 .tj-btn-primary:hover i {
 	-webkit-transform: rotate(0);
@@ -281,6 +282,8 @@ a h6:hover {
 }
 .tj-btn-secondary:hover {
 	background: var(--tj-theme-primary);
+	box-shadow: 0 0 25px rgba(14, 165, 233, 0.5);
+	color: #fff;
 }
 .lead {
 	font-size: 20px;
@@ -885,12 +888,12 @@ body.loaded {
 	background: -o-linear-gradient(
 		190deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(14, 165, 233, 0) 100%
 	);
 	background: linear-gradient(
 		260deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(14, 165, 233, 0) 100%
 	);
 	-webkit-filter: blur(150px);
 	filter: blur(150px);
@@ -915,11 +918,12 @@ body.loaded {
 	text-transform: uppercase;
 	animation: stroke 4s;
 	stroke-width: 1.2;
-	stroke: #4b4b4b;
+	stroke: rgba(14, 165, 233, 0.25);
+	filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.1));
 	fill: transparent;
 	font-size: 240px;
 	display: inline-block;
-	opacity: 0.4;
+	opacity: 0.35;
 }
 @keyframes stroke {
 	0% {
@@ -1010,12 +1014,12 @@ body.loaded {
 	background: -o-linear-gradient(
 		190deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(14, 165, 233, 0) 100%
 	);
 	background: linear-gradient(
 		260deg,
 		var(--tj-theme-primary) 0%,
-		rgba(115, 67, 210, 0) 100%
+		rgba(14, 165, 233, 0) 100%
 	);
 	-webkit-filter: blur(150px);
 	filter: blur(150px);
@@ -1095,17 +1099,11 @@ body.loaded {
 	right: 0px;
 	position: absolute;
 	z-index: 1;
-	background: var(--tj-theme-primary);
-	background: -o-linear-gradient(
-		190deg,
-		var(--tj-theme-secondary) 0%,
-		var(--tj-theme-primary) 100%
-	);
-	background: linear-gradient(
-		260deg,
-		var(--tj-theme-secondary) 0%,
-		var(--tj-theme-primary) 100%
-	);
+	background: rgba(14, 165, 233, 0.08);
+	border: 1px solid rgba(14, 165, 233, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 16px;
+	box-shadow: 0 0 30px rgba(14, 165, 233, 0.1);
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
@@ -1761,7 +1759,9 @@ body.loaded {
 	margin-bottom: 30px;
 	border-radius: 20px;
 	background: var(--tj-theme-accent-2);
+	border: 1px solid rgba(14, 165, 233, 0.15);
 	z-index: 10;
+	transition: all 0.4s ease;
 }
 .resume-widget .resume-item:before {
 	content: "";
@@ -1778,18 +1778,13 @@ body.loaded {
 	border-radius: 20px;
 }
 .resume-widget .resume-item:hover:before {
-	background: var(--tj-theme-primary);
-	background: -o-linear-gradient(
-		190deg,
-		var(--tj-theme-secondary) 0%,
-		var(--tj-theme-primary) 100%
-	);
-	background: linear-gradient(
-		260deg,
-		var(--tj-theme-secondary) 0%,
-		var(--tj-theme-primary) 100%
-	);
+	background: rgba(14, 165, 233, 0.06);
 	opacity: 1;
+}
+.resume-widget .resume-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.25);
+	border-color: rgba(14, 165, 233, 0.4);
 }
 .resume-widget .resume-item .time {
 	color: var(--tj-theme-primary);
@@ -1836,7 +1831,7 @@ body.loaded {
 	border-radius: 25px;
 	padding: 40px 15px 30px;
 	background: var(--tj-theme-accent-2);
-	border: 1px solid transparent;
+	border: 1px solid rgba(14, 165, 233, 0.15);
 	margin-bottom: 15px;
 	-webkit-transition: 0.6s;
 	-o-transition: 0.6s;
@@ -1844,8 +1839,10 @@ body.loaded {
 }
 
 .skills-widget .skill-item:hover .skill-inner {
-	background: var(--tj-theme-secondary);
-	border: 1px solid var(--tj-theme-primary);
+	background: rgba(14, 165, 233, 0.06);
+	border: 1px solid rgba(14, 165, 233, 0.4);
+	box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.25);
+	transform: translateY(-5px);
 }
 
 .skills-widget .skill-item .icon-box {

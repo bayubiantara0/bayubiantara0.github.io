@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
 
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/theme-toggle.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
@@ -96,8 +97,11 @@
               </nav>
             </div>
 
-            <div class="header-button">
-              <a href="#" class="btn tj-btn-primary">Hire me!</a>
+            <div class="header-button d-flex align-items-center">
+              <a href="#" class="btn tj-btn-primary me-4">Hire me!</a>
+              <div class="theme-switch" onclick="toggleTheme()">
+                <i class="fa fa-moon" id="theme-icon-1"></i>
+              </div>
             </div>
 
             <div class="menu-bar d-lg-none">
@@ -141,8 +145,11 @@
               </nav>
             </div>
 
-            <div class="header-button">
-              <a href="#" class="btn tj-btn-primary">Hire me!</a>
+            <div class="header-button d-flex align-items-center">
+              <a href="#" class="btn tj-btn-primary me-4">Hire me!</a>
+              <div class="theme-switch" onclick="toggleTheme()">
+                <i class="fa fa-moon" id="theme-icon-2"></i>
+              </div>
             </div>
 
             <div class="menu-bar d-lg-none">
@@ -347,7 +354,7 @@
       <!-- SERVICES SECTION END -->
 
       <!-- PORTFOLIO SECTION START -->
-      <!-- <section class="portfolio-section" id="projects-section">
+      <section class="portfolio-section" id="projects-section">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -389,10 +396,7 @@
                     <h3 class="portfolio-title">Job Portal</h3>
                     <p>Project was about precision and information.</p>
                     <i class="flaticon-up-right-arrow"></i>
-                    <button
-                      data-mfp-src="#portfolio-wrapper"
-                      class="portfolio-link modal-popup"
-                    ></button>
+                    <a href="project-details.html" class="portfolio-link"></a>
                   </div>
                 </div>
                 <div class="portfolio-item web">
@@ -403,45 +407,15 @@
                     <h3 class="portfolio-title">Local Traveling System</h3>
                     <p>Project was about precision and information.</p>
                     <i class="flaticon-up-right-arrow"></i>
-                    <button
-                      data-mfp-src="#portfolio-wrapper"
-                      class="portfolio-link modal-popup"
-                    ></button>
+                    <a href="project-details.html" class="portfolio-link"></a>
                   </div>
                 </div>
-                <div class="portfolio-item mobile-app">
-                  <div class="image-box">
-                    <img src="assets/img/portfolio/3.jpg" alt="" />
-                  </div>
-                  <div class="content-box">
-                    <h3 class="portfolio-title">Sebastian</h3>
-                    <p>Project was about precision and information.</p>
-                    <i class="flaticon-up-right-arrow"></i>
-                    <button
-                      data-mfp-src="#portfolio-wrapper"
-                      class="portfolio-link modal-popup"
-                    ></button>
-                  </div>
-                </div>
-                <div class="portfolio-item web">
-                  <div class="image-box">
-                    <img src="assets/img/portfolio/4.jpg" alt="" />
-                  </div>
-                  <div class="content-box">
-                    <h3 class="portfolio-title">Mochnix</h3>
-                    <p>Project was about precision and information.</p>
-                    <i class="flaticon-up-right-arrow"></i>
-                    <button
-                      data-mfp-src="#portfolio-wrapper"
-                      class="portfolio-link modal-popup"
-                    ></button>
-                  </div>
-                </div>
+                <!-- Other items... -->
               </div>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- PORTFOLIO SECTION END -->
 
       <!-- start: Portfolio Popup -->
@@ -1003,5 +977,31 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contact-form.js"></script>
+    
+    <script>
+      function initTheme() {
+        let theme = localStorage.getItem('theme');
+        if(!theme) theme = 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        const icons = document.querySelectorAll('.theme-switch i');
+        icons.forEach(i => {
+           i.className = theme === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+        });
+      }
+      
+      function toggleTheme() {
+        let current = document.documentElement.getAttribute('data-theme');
+        let next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        
+        const icons = document.querySelectorAll('.theme-switch i');
+        icons.forEach(i => {
+           i.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+        });
+      }
+      
+      initTheme();
+    </script>
   </body>
 </html>

@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Project Detail - Local Traveling System by Bayu Biantara" />
+    <title>Project Detail - Bayu Biantara</title>
+
+    <link rel="apple-touch-icon" href="./assets/img/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon_gerold.css" />
+    <link rel="stylesheet" href="assets/css/backToTop.css" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/theme-toggle.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style>
+      /* ===== Project Detail Page Styles ===== */
+
+      /* Hero Banner */
+      .project-hero {
+        padding: 180px 0 80px;
+        background: var(--tj-theme-accent-1);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .project-hero::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: -5%;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        background: linear-gradient(260deg, var(--tj-theme-primary) 0%, rgba(14, 165, 233, 0) 100%);
+        filter: blur(150px);
+        z-index: -1;
+      }
+      .project-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: -5%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: linear-gradient(260deg, var(--tj-theme-secondary) 0%, rgba(6, 182, 212, 0) 100%);
+        filter: blur(150px);
+        z-index: -1;
+      }
+
+      .project-hero .breadcrumb-nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+      .project-hero .breadcrumb-nav a {
+        color: var(--tj-theme-primary);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .project-hero .breadcrumb-nav a:hover {
+        color: var(--tj-theme-secondary);
+      }
+      .project-hero .breadcrumb-nav span {
+        color: var(--tj-grey-1);
+        font-size: 14px;
+      }
+      .project-hero .breadcrumb-nav i {
+        color: var(--tj-grey-1);
+        font-size: 10px;
+      }
+
+      .project-hero .project-title {
+        font-size: 52px;
+        background: linear-gradient(to right, var(--tj-theme-primary) 0%, var(--tj-white) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 15px;
+        line-height: 1.1;
+      }
+
+      .project-hero .project-subtitle {
+        font-size: 18px;
+        color: var(--tj-grey-1);
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      .project-meta-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 25px;
+      }
+      .project-meta-tags .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        background: var(--tj-theme-accent-2);
+        border: 1px solid rgba(14, 165, 233, 0.15);
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--tj-theme-primary);
+        transition: all 0.3s ease;
+      }
+      .project-meta-tags .tag:hover {
+        border-color: var(--tj-theme-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.15);
+      }
+      .project-meta-tags .tag i {
+        font-size: 12px;
+      }
+
+      /* Content Section */
+      .project-content-section {
+        padding: 80px 0;
+        background-color: var(--tj-black-2);
+      }
+
+      /* Showcase Image */
+      .project-showcase {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(14, 165, 233, 0.15);
+        background: var(--tj-theme-accent-2);
+        transition: all 0.4s ease;
+      }
+      .project-showcase:hover {
+        border-color: rgba(14, 165, 233, 0.4);
+        box-shadow: 0 20px 60px -15px rgba(14, 165, 233, 0.2);
+        transform: translateY(-5px);
+      }
+      .project-showcase img {
+        width: 100%;
+        display: block;
+      }
+      .project-showcase .showcase-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+        padding: 30px 25px 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .project-showcase:hover .showcase-overlay {
+        opacity: 1;
+      }
+      .showcase-overlay span {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .showcase-overlay span i {
+        font-size: 16px;
+      }
+
+      /* Info Card */
+      .project-info-card {
+        background: var(--tj-theme-accent-2);
+        border: 1px solid rgba(14, 165, 233, 0.15);
+        border-radius: 20px;
+        padding: 35px 30px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+      }
+      .project-info-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(to right, var(--tj-theme-primary), var(--tj-theme-secondary));
+      }
+      .project-info-card:hover {
+        border-color: rgba(14, 165, 233, 0.3);
+        box-shadow: 0 15px 40px -10px rgba(14, 165, 233, 0.15);
+      }
+      .project-info-card h4 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+      }
+
+      .info-row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(14, 165, 233, 0.06);
+      }
+      .info-row:last-of-type {
+        border-bottom: none;
+      }
+      .info-row .info-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: rgba(14, 165, 233, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .info-row .info-icon i {
+        color: var(--tj-theme-primary);
+        font-size: 16px;
+      }
+      .info-row .info-text {
+        flex: 1;
+      }
+      .info-row .info-text .label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--tj-grey-1);
+        margin-bottom: 3px;
+        font-weight: 600;
+      }
+      .info-row .info-text .value {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--tj-white);
+      }
+
+      .info-cta {
+        margin-top: 25px;
+      }
+      .info-cta .btn {
+        width: 100%;
+        border-radius: 14px;
+        padding: 16px 30px;
+        font-size: 15px;
+      }
+
+      /* About section */
+      .project-about {
+        padding: 60px 0 0;
+      }
+      .project-about h2 {
+        font-size: 32px;
+        background: linear-gradient(to right, var(--tj-theme-primary), var(--tj-white));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      .project-about p {
+        line-height: 1.8;
+        margin-bottom: 16px;
+      }
+
+      /* Feature Cards */
+      .features-section {
+        padding: 60px 0 0;
+      }
+      .features-section h2 {
+        font-size: 32px;
+        background: linear-gradient(to right, var(--tj-theme-primary), var(--tj-white));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 35px;
+        display: inline-block;
+      }
+      .feature-card {
+        background: var(--tj-theme-accent-2);
+        border: 1px solid rgba(14, 165, 233, 0.1);
+        border-radius: 16px;
+        padding: 30px 25px;
+        text-align: center;
+        transition: all 0.4s ease;
+        height: 100%;
+      }
+      .feature-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(14, 165, 233, 0.4);
+        box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.2);
+      }
+      .feature-card .feature-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--tj-theme-primary), var(--tj-theme-secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+      .feature-card .feature-icon i {
+        font-size: 24px;
+        color: #fff;
+      }
+      .feature-card h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .feature-card p {
+        font-size: 14px;
+        color: var(--tj-grey-1);
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+
+      /* Tech Stack */
+      .tech-section {
+        padding: 60px 0 0;
+      }
+      .tech-section h2 {
+        font-size: 32px;
+        background: linear-gradient(to right, var(--tj-theme-primary), var(--tj-white));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+        display: inline-block;
+      }
+      .tech-stack-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .tech-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 22px;
+        background: var(--tj-theme-accent-2);
+        border: 1px solid rgba(14, 165, 233, 0.1);
+        border-radius: 14px;
+        transition: all 0.3s ease;
+      }
+      .tech-badge:hover {
+        border-color: rgba(14, 165, 233, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px -10px rgba(14, 165, 233, 0.2);
+      }
+      .tech-badge img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+      }
+      .tech-badge span {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--tj-white);
+      }
+
+      /* Navigation */
+      .project-nav-section {
+        padding: 60px 0 0;
+      }
+      .project-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+        border-top: 1px solid rgba(14, 165, 233, 0.1);
+      }
+      .project-nav a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        padding: 18px 24px;
+        background: var(--tj-theme-accent-2);
+        border: 1px solid rgba(14, 165, 233, 0.1);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        flex: 1;
+      }
+      .project-nav a:hover {
+        border-color: rgba(14, 165, 233, 0.4);
+        box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.2);
+        transform: translateY(-3px);
+      }
+      .project-nav a.next-link {
+        text-align: right;
+        flex-direction: row-reverse;
+      }
+      .project-nav a .nav-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--tj-grey-1);
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+      .project-nav a .nav-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--tj-white);
+      }
+      .project-nav a i {
+        font-size: 20px;
+        color: var(--tj-theme-primary);
+      }
+
+      /* Dark mode overrides */
+      [data-theme="dark"] .project-info-card {
+        background: rgba(56, 189, 248, 0.05);
+        border-color: rgba(56, 189, 248, 0.15);
+      }
+      [data-theme="dark"] .project-info-card:hover {
+        box-shadow: 0 15px 40px -10px rgba(56, 189, 248, 0.2);
+      }
+      [data-theme="dark"] .feature-card {
+        background: rgba(56, 189, 248, 0.05);
+        border-color: rgba(56, 189, 248, 0.1);
+      }
+      [data-theme="dark"] .feature-card:hover {
+        border-color: rgba(56, 189, 248, 0.5);
+        box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.25);
+      }
+      [data-theme="dark"] .tech-badge {
+        background: rgba(56, 189, 248, 0.05);
+        border-color: rgba(56, 189, 248, 0.1);
+      }
+      [data-theme="dark"] .tech-badge:hover {
+        border-color: rgba(56, 189, 248, 0.5);
+      }
+      [data-theme="dark"] .project-showcase {
+        border-color: rgba(56, 189, 248, 0.15);
+      }
+      [data-theme="dark"] .project-showcase:hover {
+        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 20px 60px -15px rgba(56, 189, 248, 0.2);
+      }
+      [data-theme="dark"] .project-meta-tags .tag {
+        background: rgba(56, 189, 248, 0.08);
+        border-color: rgba(56, 189, 248, 0.15);
+      }
+      [data-theme="dark"] .project-nav a {
+        background: rgba(56, 189, 248, 0.05);
+        border-color: rgba(56, 189, 248, 0.1);
+      }
+      [data-theme="dark"] .project-nav a:hover {
+        border-color: rgba(56, 189, 248, 0.4);
+      }
+      [data-theme="dark"] .project-hero .project-title {
+        background: linear-gradient(to right, #38bdf8 0%, #f1f5f9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      [data-theme="dark"] .project-about h2,
+      [data-theme="dark"] .features-section h2,
+      [data-theme="dark"] .tech-section h2 {
+        background: linear-gradient(to right, #38bdf8 0%, #f1f5f9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Responsive */
+      @media only screen and (max-width: 767px) {
+        .project-hero {
+          padding: 130px 0 50px;
+        }
+        .project-hero .project-title {
+          font-size: 32px;
+        }
+        .project-content-section {
+          padding: 50px 0;
+        }
+        .project-nav {
+          flex-direction: column;
+        }
+        .project-nav a {
+          width: 100%;
+        }
+        .project-info-card {
+          margin-top: 30px;
+        }
+      }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .project-hero .project-title {
+          font-size: 40px;
+        }
+        .project-info-card {
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- start: Back To Top -->
+    <div class="progress-wrap" id="scrollUp">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- end: Back To Top -->
+
+    <!-- HEADER START -->
+    <header class="tj-header-area header-absolute">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex flex-wrap align-items-center">
+            <div class="logo-box">
+              <a href="index.html">
+                <img src="assets/img/logo.png" alt="Bayu Biantara Logo" />
+              </a>
+            </div>
+
+            <div class="header-info-list d-none d-md-inline-block">
+              <ul class="ul-reset">
+                <li><a href="index.html">Bayu Biantara</a></li>
+              </ul>
+            </div>
+
+            <div class="header-menu">
+              <nav>
+                <ul>
+                  <li><a href="index.html#services-section">Services</a></li>
+                  <li><a href="index.html#projects-section">Projects</a></li>
+                  <li><a href="index.html#resume-section">Resume</a></li>
+                  <li><a href="index.html#skills-section">Skills</a></li>
+                  <li><a href="index.html#contact-section">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="header-button d-flex align-items-center">
+              <a href="index.html#contact-section" class="btn tj-btn-primary me-4">Hire me!</a>
+              <div class="theme-switch" onclick="toggleTheme()">
+                <i class="fa fa-moon" id="theme-icon-1"></i>
+              </div>
+            </div>
+
+            <div class="menu-bar d-lg-none">
+              <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <main class="site-content" id="content">
+      <!-- PROJECT HERO -->
+      <section class="project-hero">
+        <div class="container">
+          <div class="breadcrumb-nav wow fadeInUp" data-wow-delay=".1s">
+            <a href="index.html">Home</a>
+            <i class="fa fa-chevron-right"></i>
+            <a href="index.html#projects-section">Projects</a>
+            <i class="fa fa-chevron-right"></i>
+            <span>Local Traveling System</span>
+          </div>
+
+          <h1 class="project-title wow fadeInUp" data-wow-delay=".2s">
+            Local Traveling System
+          </h1>
+          <p class="project-subtitle wow fadeInUp" data-wow-delay=".3s">
+            A comprehensive tourism management platform designed to streamline local destination management, tour package bookings, and interactive travel experiences.
+          </p>
+
+          <div class="project-meta-tags wow fadeInUp" data-wow-delay=".4s">
+            <div class="tag"><i class="fa fa-globe"></i> Web Application</div>
+            <div class="tag"><i class="fa fa-code"></i> Full Stack</div>
+            <div class="tag"><i class="fa fa-check-circle"></i> Completed</div>
+            <div class="tag"><i class="fa fa-calendar"></i> August 2023</div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECT HERO END -->
+
+      <!-- PROJECT CONTENT -->
+      <section class="project-content-section">
+        <div class="container">
+          <div class="row">
+            <!-- Main Image Showcase -->
+            <div class="col-lg-8 mb-4 wow fadeInLeft" data-wow-delay=".3s">
+              <div class="project-showcase">
+                <img src="assets/img/lt.png" alt="Local Traveling System Dashboard" />
+                <div class="showcase-overlay">
+                  <span><i class="fa fa-expand"></i> Dashboard Preview</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Info Card -->
+            <div class="col-lg-4 mb-4 wow fadeInRight" data-wow-delay=".4s">
+              <div class="project-info-card">
+                <h4>Project Details</h4>
+
+                <div class="info-row">
+                  <div class="info-icon">
+                    <i class="fa fa-user"></i>
+                  </div>
+                  <div class="info-text">
+                    <span class="label">Client</span>
+                    <span class="value">Personal Project</span>
+                  </div>
+                </div>
+
+                <div class="info-row">
+                  <div class="info-icon">
+                    <i class="fa fa-calendar-alt"></i>
+                  </div>
+                  <div class="info-text">
+                    <span class="label">Date</span>
+                    <span class="value">August 2023</span>
+                  </div>
+                </div>
+
+                <div class="info-row">
+                  <div class="info-icon">
+                    <i class="fa fa-briefcase"></i>
+                  </div>
+                  <div class="info-text">
+                    <span class="label">Role</span>
+                    <span class="value">Full Stack Developer</span>
+                  </div>
+                </div>
+
+                <div class="info-row">
+                  <div class="info-icon">
+                    <i class="fa fa-signal"></i>
+                  </div>
+                  <div class="info-text">
+                    <span class="label">Status</span>
+                    <span class="value" style="color: var(--tj-theme-primary);">✔ Completed</span>
+                  </div>
+                </div>
+
+                <div class="info-row">
+                  <div class="info-icon">
+                    <i class="fa fa-layer-group"></i>
+                  </div>
+                  <div class="info-text">
+                    <span class="label">Category</span>
+                    <span class="value">Web Application</span>
+                  </div>
+                </div>
+
+                <div class="info-cta">
+                  <a href="#" class="btn tj-btn-primary" style="border: none;">
+                    Live Preview <i class="fa fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About -->
+          <div class="project-about wow fadeInUp" data-wow-delay=".3s">
+            <h2>About The Project</h2>
+            <p>
+              This Local Traveling System was built to manage local tourism destinations, including complete CRUD operations for tour packages, booking integration, and an interactive frontend dashboard. The system provides a comprehensive solution for both tourism administrators and travelers.
+            </p>
+            <p>
+              Built with Laravel, React.js, and MySQL, the platform provides seamless integration with secure payment gateways and interactive tour maps. The UI/UX focuses on simplifying the user journey to convert clicks into successful bookings efficiently, with real-time availability tracking and automated notification systems.
+            </p>
+          </div>
+
+          <!-- Features -->
+          <div class="features-section wow fadeInUp" data-wow-delay=".3s">
+            <h2>Key Features</h2>
+            <div class="row g-4">
+              <div class="col-md-4 col-sm-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-chart-bar"></i>
+                  </div>
+                  <h5>Interactive Dashboard</h5>
+                  <p>Real-time analytics with comprehensive reporting for administrators to monitor bookings and revenue.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-credit-card"></i>
+                  </div>
+                  <h5>Secure Payments</h5>
+                  <p>Integrated payment gateway with multiple payment methods and secure transaction processing.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-map-marked-alt"></i>
+                  </div>
+                  <h5>Interactive Maps</h5>
+                  <p>Location-based tour discovery with interactive maps and real-time destination information.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <h5>User Management</h5>
+                  <p>Complete user authentication with role-based access control and profile management.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-bell"></i>
+                  </div>
+                  <h5>Notifications</h5>
+                  <p>Automated booking confirmations, reminders, and status updates via email and in-app alerts.</p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-mobile-alt"></i>
+                  </div>
+                  <h5>Responsive Design</h5>
+                  <p>Fully responsive interface optimized for desktops, tablets, and mobile devices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="tech-section wow fadeInUp" data-wow-delay=".3s">
+            <h2>Tech Stack</h2>
+            <div class="tech-stack-grid">
+              <div class="tech-badge">
+                <img src="assets/img/icons/laravel.svg" alt="Laravel" />
+                <span>Laravel</span>
+              </div>
+              <div class="tech-badge">
+                <img src="assets/img/icons/react.svg" alt="React" />
+                <span>React.js</span>
+              </div>
+              <div class="tech-badge">
+                <img src="assets/img/icons/mysql.svg" alt="MySQL" />
+                <span>MySQL</span>
+              </div>
+              <div class="tech-badge">
+                <img src="assets/img/icons/bootstrap.svg" alt="Bootstrap" />
+                <span>Bootstrap</span>
+              </div>
+              <div class="tech-badge">
+                <img src="assets/img/icons/api.svg" alt="REST API" />
+                <span>REST API</span>
+              </div>
+              <div class="tech-badge">
+                <img src="assets/img/icons/git.svg" alt="Git" />
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Navigation -->
+          <div class="project-nav-section wow fadeInUp" data-wow-delay=".3s">
+            <div class="project-nav">
+              <a href="#" class="prev-link">
+                <i class="fa fa-arrow-left"></i>
+                <div>
+                  <div class="nav-label">Previous Project</div>
+                  <div class="nav-title">Job Portal</div>
+                </div>
+              </a>
+              <a href="index.html#projects-section" style="flex: 0; padding: 18px;">
+                <i class="fa fa-th-large" style="font-size: 24px;"></i>
+              </a>
+              <a href="#" class="next-link">
+                <i class="fa fa-arrow-right"></i>
+                <div>
+                  <div class="nav-label">Next Project</div>
+                  <div class="nav-title">Job Portal</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- PROJECT CONTENT END -->
+    </main>
+
+    <!-- FOOTER AREA START -->
+    <footer class="tj-footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="footer-logo-box">
+              <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+            </div>
+            <div class="footer-menu">
+              <nav>
+                <ul>
+                  <li><a href="index.html#services-section">Services</a></li>
+                  <li><a href="index.html#projects-section">Projects</a></li>
+                  <li><a href="index.html#resume-section">Resume</a></li>
+                  <li><a href="index.html#skills-section">Skills</a></li>
+                  <li><a href="index.html#contact-section">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="copy-text">
+              <p>
+                &copy; 2025 Copyright by
+                <a href="#" target="_blank">Bayu Biantara</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER AREA END -->
+
+    <!-- JS here -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+
+    <script>
+      // Initialize WOW.js animations
+      new WOW().init();
+
+      // Theme toggle
+      function initTheme() {
+        let theme = localStorage.getItem('theme');
+        if(!theme) theme = 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        const icons = document.querySelectorAll('.theme-switch i');
+        icons.forEach(i => {
+           i.className = theme === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+        });
+      }
+
+      function toggleTheme() {
+        let current = document.documentElement.getAttribute('data-theme');
+        let next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        const icons = document.querySelectorAll('.theme-switch i');
+        icons.forEach(i => {
+           i.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+        });
+      }
+
+      initTheme();
+
+      // Mobile menu toggle (same as main page)
+      $(document).ready(function() {
+        $('.menu-bar').on('click', function() {
+          $(this).toggleClass('menu-bar-toggeled');
+          $('.header-menu').toggleClass('opened');
+        });
+      });
+    </script>
+  </body>
+</html>
