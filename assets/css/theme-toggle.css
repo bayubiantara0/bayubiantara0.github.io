@@ -85,6 +85,18 @@
 	fill: var(--tj-black-2);
 }
 
+/* Logo filtering for light mode (Turn white elements dark) */
+html:not([data-theme="dark"]) .logo-box img,
+html:not([data-theme="dark"]) .footer-logo-box img {
+	filter: brightness(0);
+}
+
+/* Hero Title SVG Text for light mode */
+html:not([data-theme="dark"]) .hero-section .intro_text svg text {
+	stroke: rgba(30, 41, 59, 0.15); /* Slate 800 with low opacity */
+	filter: drop-shadow(0 0 10px rgba(30, 41, 59, 0.05));
+}
+
 /*
  * ===============================
  *  Grid Layout for Services

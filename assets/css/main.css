@@ -1,4 +1,4 @@
-﻿/*-----------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------
 
 Theme Name: Gerold - Personal Portfolio HTML5 Template
 Theme URI: https://themejunction.net/html/gerold/demo/
@@ -1353,6 +1353,9 @@ body.loaded {
 }
 .portfolio-box .portfolio-item .content-box p {
 	margin-bottom: 0;
+	color: #ffffff;
+	opacity: 0.9;
+	font-weight: 500;
 }
 .portfolio-box .portfolio-item .content-box .portfolio-link {
 	position: absolute;

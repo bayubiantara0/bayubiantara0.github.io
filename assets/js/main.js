@@ -265,14 +265,9 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		/*------------------------------------------------------
   	/  WoW Js
   	/------------------------------------------------------*/
-		var wow = new WOW({
-			boxClass: "wow", // default
-			animateClass: "animated", // default
-			offset: 100, // default
-			mobile: true, // default
-			live: true, // default
-		});
-		wow.init();
+		/*------------------------------------------------------
+  	/  AOS has been initialized in index.html instead of WOW
+  	/------------------------------------------------------*/
 
 		/*------------------------------------------------------
   	/  Preloader
