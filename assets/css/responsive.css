@@ -968,3 +968,251 @@
 		margin-top: 60px;
 	}
 }
+
+/* ===============================
+   CRM Dashboard Inspired Responsive Overrides
+   =============================== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.site-nav-shell .nav-inner {
+		padding: 12px 16px;
+	}
+	.tj-header-area .header-menu ul {
+		column-gap: 18px;
+	}
+	.hero-clean {
+		padding: 190px 0 92px;
+	}
+	.hero-title {
+		font-size: 56px;
+	}
+	.hero-metric-grid {
+		grid-template-columns: 1fr;
+	}
+	.project-title {
+		font-size: 50px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.site-nav-shell {
+		padding-top: 18px;
+	}
+	.site-nav-shell .nav-inner {
+		padding: 12px 14px;
+		border-radius: 18px;
+	}
+	.tj-header-area .header-button {
+		margin-left: auto;
+		gap: 10px;
+	}
+	.tj-header-area .header-menu,
+	.tj-header-area .menu-bar {
+		display: none !important;
+	}
+	.mobile-bottom-nav {
+		position: fixed;
+		left: 12px;
+		right: 12px;
+		bottom: 12px;
+		z-index: 140;
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 8px;
+		padding: 10px;
+		border-radius: 24px;
+	}
+	.mobile-bottom-nav__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		min-height: 58px;
+		padding: 8px 6px;
+		border-radius: 18px;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		text-align: center;
+	}
+	.mobile-bottom-nav__item i {
+		font-size: 18px;
+	}
+	body,
+	.site-content {
+		padding-bottom: 110px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.hero-clean {
+		padding: 164px 0 80px;
+	}
+	.hero-title {
+		font-size: 48px;
+	}
+	.hero-metric-grid {
+		grid-template-columns: 1fr;
+	}
+	.hero-visual-shell,
+	.contact-form-box,
+	.project-info-card,
+	.feature-card,
+	.portfolio-box .portfolio-item,
+	.resume-widget .resume-item,
+	.skills-widget .skill-inner {
+		border-radius: 22px;
+	}
+	.contact-form-box {
+		padding: 32px 26px;
+	}
+	.contact-info-list li {
+		padding: 22px 18px 22px 82px;
+	}
+	.section-panel::before,
+	.footer-panel::before {
+		left: 12px;
+		right: 12px;
+		top: 12px;
+		bottom: 12px;
+		border-radius: 24px;
+	}
+	.tj-post .tj-post__content {
+		padding: 28px 24px;
+	}
+	.tj-post__content .tj-post__title {
+		font-size: 28px;
+	}
+	.single-post__navigation .tj-navigation_post,
+	.project-nav a {
+		max-width: 100%;
+	}
+	.project-hero {
+		padding: 164px 0 72px;
+	}
+	.project-title {
+		font-size: 44px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.site-nav-shell {
+		padding-top: 14px;
+	}
+	.site-nav-shell .nav-inner {
+		padding: 10px 12px;
+		border-radius: 16px;
+	}
+	.hero-clean {
+		padding: 138px 0 64px;
+	}
+	.hero-badge,
+	.section-kicker {
+		font-size: 11px;
+		padding: 8px 12px;
+	}
+	.hero-title {
+		font-size: 38px;
+		line-height: 1.12;
+	}
+	.hero-summary {
+		font-size: 16px;
+	}
+	.hero-metric-grid,
+	.project-nav {
+		grid-template-columns: 1fr;
+		flex-direction: column;
+	}
+	.hero-metric-card {
+		padding: 20px;
+	}
+	.hero-image-box {
+		padding: 16px;
+	}
+	.section-panel::before,
+	.footer-panel::before {
+		left: 10px;
+		right: 10px;
+		top: 10px;
+		bottom: 10px;
+		border-radius: 22px;
+	}
+	.services-section,
+	.portfolio-section,
+	.resume-section,
+	.skills-section,
+	.contact-section,
+	.tj-posts__area,
+	.tj-post-details__area,
+	.project-content-section {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.hero-visual-shell,
+	.portfolio-box .portfolio-item,
+	.contact-form-box,
+	.project-info-card,
+	.feature-card,
+	.resume-widget .resume-item,
+	.skills-widget .skill-inner {
+		border-radius: 22px;
+	}
+	.contact-form-box {
+		padding: 28px 20px;
+	}
+	.contact-info-list li {
+		padding: 18px 16px 18px 74px;
+	}
+	.contact-info-list .icon-box {
+		left: 14px;
+		width: 46px;
+		height: 46px;
+		line-height: 46px;
+	}
+	.tj-post .tj-post__content,
+	.tj_main_sidebar .sidebar_widget,
+	.wp-block-quote,
+	blockquote,
+	.project-info-card,
+	.feature-card {
+		padding: 24px 18px;
+	}
+	.tj-post__content .tj-post__title {
+		font-size: 24px;
+	}
+	.tj__pagination ul li .page-numbers {
+		width: 42px;
+		height: 42px;
+	}
+	.single-post_tag_share .tj_tag {
+		width: 100%;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.single-post__navigation .tj-navigation_post {
+		max-width: 100%;
+	}
+	.tj__comment .tj-comment__wrap {
+		padding: 20px 16px;
+	}
+	.project-hero {
+		padding: 136px 0 56px;
+	}
+	.project-title {
+		font-size: 34px;
+	}
+	.project-subtitle {
+		font-size: 16px;
+	}
+	.project-meta-tags {
+		gap: 10px;
+	}
+	.project-meta-tags .tag,
+	.tech-badge {
+		width: 100%;
+		justify-content: flex-start;
+	}
+	.project-nav a {
+		width: 100%;
+	}
+}

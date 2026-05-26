@@ -431,5 +431,41 @@ Description: Gerold - Personal Portfolio HTML5 Template
 				});
 			});
 		}
+
+		/*------------------------------------------------------
+  	/	 Mobile Bottom Navigation Active State
+  	/------------------------------------------------------*/
+		function updateMobileBottomNav() {
+			const links = document.querySelectorAll(".mobile-bottom-nav__item");
+			if (!links.length) {
+				return;
+			}
+
+			const sections = Array.from(links)
+				.map((link) => document.getElementById(link.dataset.section))
+				.filter(Boolean);
+
+			if (!sections.length) {
+				return;
+			}
+
+			const scrollY = window.scrollY + window.innerHeight * 0.4;
+			let activeId = sections[0].id;
+
+			sections.forEach((section) => {
+				if (scrollY >= section.offsetTop) {
+					activeId = section.id;
+				}
+			});
+
+			links.forEach((link) => {
+				link.classList.toggle("is-active", link.dataset.section === activeId);
+			});
+		}
+
+		window.addEventListener("load", updateMobileBottomNav);
+		window.addEventListener("scroll", updateMobileBottomNav, { passive: true });
+		window.addEventListener("resize", updateMobileBottomNav);
+		updateMobileBottomNav();
 	});
 })(jQuery);
