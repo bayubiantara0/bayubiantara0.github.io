@@ -1,78 +1,78 @@
-// Initialize EmailJS
-emailjs.init("EMAILJS_PUBLIC_KEY_PLACEHOLDER");
+// Contact form via EmailJS.
+// The *_PLACEHOLDER strings are replaced by GitHub Actions at deploy time
+// (see .github/workflows/deploy.yml). Keep them exactly as written.
+(function () {
+  "use strict";
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  var form = document.getElementById("contactForm");
+  if (!form || typeof emailjs === "undefined") return;
 
-  const submitBtn = this.querySelector('button[type="submit"]');
-  const messageDiv = document.getElementById("form-message");
+  emailjs.init("EMAILJS_PUBLIC_KEY_PLACEHOLDER");
 
-  // Validasi client-side
-  const fname = document.getElementById("fname").value.trim();
-  const lname = document.getElementById("lname").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone")
-    ? document.getElementById("phone").value.trim()
-    : "";
-  const message = document.getElementById("message").value.trim();
+  var messageDiv = document.getElementById("form-message");
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var submitHtml = submitBtn.innerHTML;
 
-  if (!fname || !lname || !email || !message) {
-    messageDiv.innerHTML =
-      '<div style="color: red; font-weight: bold; padding: 10px; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px;">Please fill in all required fields.</div>';
-    return;
+  function show(type, text) {
+    messageDiv.innerHTML = '<div class="alert ' + (type === "ok" ? "is-ok" : "is-err") + '">' + text + "</div>";
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    messageDiv.innerHTML =
-      '<div style="color: red; font-weight: bold; padding: 10px; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px;">Please enter a valid email address.</div>';
-    return;
-  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Sending...";
-  messageDiv.innerHTML = "";
+    var fname = document.getElementById("fname").value.trim();
+    var lname = document.getElementById("lname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phoneEl = document.getElementById("phone");
+    var phone = phoneEl ? phoneEl.value.trim() : "";
+    var message = document.getElementById("message").value.trim();
 
-  // Add current date to form data
-  const currentDate = new Date().toLocaleString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZoneName: "short",
-  });
+    if (!fname || !lname || !email || !message) {
+      show("err", "Please fill in all required fields.");
+      return;
+    }
 
-  // Create form data object with all required fields
-  const templateParams = {
-    from_fname: fname,
-    from_lname: lname,
-    from_email: email,
-    from_phone: phone || "Not provided",
-    message: message,
-    current_date: currentDate,
-  };
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      show("err", "Please enter a valid email address.");
+      return;
+    }
 
-  // Send email using EmailJS
-  emailjs
-    .send(
-      "EMAILJS_SERVICE_ID_PLACEHOLDER",
-      "EMAILJS_TEMPLATE_ID_PLACEHOLDER",
-      templateParams
-    )
-    .then(function () {
-      messageDiv.innerHTML =
-        '<div style="color: green; font-weight: bold; padding: 10px; background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px;">Message sent successfully! Thank you for contacting us.</div>';
-      document.getElementById("contactForm").reset();
-    })
-    .catch(function (error) {
-      console.error("EmailJS Error:", error);
-      messageDiv.innerHTML =
-        '<div style="color: red; font-weight: bold; padding: 10px; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px;">Failed to send message. Please try again later.</div>';
-    })
-    .finally(function () {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send Message";
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    messageDiv.innerHTML = "";
+
+    var currentDate = new Date().toLocaleString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZoneName: "short"
     });
-});
+
+    var templateParams = {
+      from_fname: fname,
+      from_lname: lname,
+      from_email: email,
+      from_phone: phone || "Not provided",
+      message: message,
+      current_date: currentDate
+    };
+
+    emailjs
+      .send("EMAILJS_SERVICE_ID_PLACEHOLDER", "EMAILJS_TEMPLATE_ID_PLACEHOLDER", templateParams)
+      .then(function () {
+        show("ok", "Message sent. Thank you, I will get back to you soon.");
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error("EmailJS Error:", error);
+        show("err", "Failed to send message. Please try again later.");
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitHtml;
+      });
+  });
+})();

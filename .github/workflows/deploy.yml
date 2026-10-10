@@ -24,35 +24,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check if contact-form.js exists
+      - name: Inject EmailJS credentials
+        env:
+          PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
         run: |
-          if [ -f "assets/js/contact-form.js" ]; then
-            echo "File exists"
-            echo "Content before replacement:"
-            cat assets/js/contact-form.js
-          else
-            echo "File does not exist!"
+          test -f assets/js/contact-form.js
+          sed -i "s|EMAILJS_PUBLIC_KEY_PLACEHOLDER|${PUBLIC_KEY}|g" assets/js/contact-form.js
+          sed -i "s|EMAILJS_SERVICE_ID_PLACEHOLDER|${SERVICE_ID}|g" assets/js/contact-form.js
+          sed -i "s|EMAILJS_TEMPLATE_ID_PLACEHOLDER|${TEMPLATE_ID}|g" assets/js/contact-form.js
+          if grep -q "_PLACEHOLDER" assets/js/contact-form.js; then
+            echo "::error::EmailJS placeholders were not replaced. Check repository secrets."
             exit 1
           fi
 
-      - name: Replace EmailJS placeholders
+      - name: Build site folder
         run: |
-          # Escape special characters in secrets and replace placeholders
-          sed -i "s/EMAILJS_PUBLIC_KEY_PLACEHOLDER/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" assets/js/contact-form.js
-          sed -i "s/EMAILJS_SERVICE_ID_PLACEHOLDER/${{ secrets.EMAILJS_SERVICE_ID }}/g" assets/js/contact-form.js
-          sed -i "s/EMAILJS_TEMPLATE_ID_PLACEHOLDER/${{ secrets.EMAILJS_TEMPLATE_ID }}/g" assets/js/contact-form.js
-
-      - name: Verify replacement worked
-        run: |
-          echo "Content after replacement:"
-          cat assets/js/contact-form.js
-          echo "Checking if placeholders still exist:"
-          if grep -q "PLACEHOLDER" assets/js/contact-form.js; then
-            echo "WARNING: Some placeholders were not replaced!"
-            grep "PLACEHOLDER" assets/js/contact-form.js
-          else
-            echo "All placeholders successfully replaced!"
-          fi
+          mkdir -p dist
+          cp index.html project-details.html dist/
+          cp "CV_Bayu Biantara.pdf" dist/
+          cp -r assets dist/assets
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -60,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
