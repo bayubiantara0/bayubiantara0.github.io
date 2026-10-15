@@ -5,521 +5,424 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Bayu Biantara is a backend and full stack developer from Subang, Indonesia, building reliable web and mobile applications with Laravel, Docker, and modern tooling."
+      content="Bayu Biantara is a software engineer from Subang, Indonesia. Backend services, databases that stay fast, and the web and mobile apps built on top of them."
     />
-    <meta name="theme-color" content="#282c33" />
-    <title>Bayu Biantara — Backend &amp; Full Stack Developer</title>
+    <meta name="theme-color" content="#f2f1ee" />
+    <meta property="og:title" content="Bayu Biantara — Software Engineer" />
+    <meta property="og:description" content="Backend, databases, and mobile apps built for the real world. Twelve shipped projects, from HR systems to logistics ERP." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bayubiantara0.github.io/" />
+    <meta property="og:image" content="https://bayubiantara0.github.io/assets/img/og.png" />
+    <title>Bayu Biantara — Software Engineer</title>
 
-    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/img/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500;600;700&display=swap"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <div class="preloader" aria-hidden="true">
+    <div class="intro" aria-hidden="true">
       <div>
-        <div class="preloader__text">bayu.dev</div>
-        <div class="preloader__bar"></div>
-        <div class="preloader__count" aria-hidden="true">0</div>
+        <div class="intro__bar"></div>
+        <div class="intro__count hud">0%</div>
       </div>
     </div>
 
-    <div class="bg-grid" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
 
-    <aside class="side-rail" aria-label="Social links">
-      <a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-      </a>
-      <a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
-      </a>
-    </aside>
-
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="#home" aria-label="Bayu Biantara home">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-            <rect x="0" y="0" width="7" height="7" />
-            <rect x="9" y="0" width="7" height="7" />
-            <rect x="0" y="9" width="7" height="7" />
-            <rect x="9" y="9" width="7" height="7" fill="#58a6ff" />
-          </svg>
-          <span>Bayu</span>
-        </a>
-
-        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        </button>
-
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#home" class="is-active"><span class="hash">#</span><span data-scramble>home</span></a>
-          <a href="#projects"><span class="hash">#</span><span data-scramble>projects</span></a>
-          <a href="#skills"><span class="hash">#</span><span data-scramble>skills</span></a>
-          <a href="#about-me"><span class="hash">#</span><span data-scramble>about-me</span></a>
-          <a href="#experience"><span class="hash">#</span><span data-scramble>experience</span></a>
-          <a href="#contacts"><span class="hash">#</span><span data-scramble>contacts</span></a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <!-- ================= HERO ================= -->
-      <section class="hero" id="home">
-        <div class="container">
-          <div class="hero__copy">
-            <h1 class="hero__title">
-              Bayu is a
-              <span class="hero__role" data-typed='["backend developer","full stack developer","mobile developer"]'><span class="typed-text">backend developer</span></span>
-              who builds reliable systems
-            </h1>
-            <p class="hero__desc">
-              He engineers backend services, APIs, and databases that stay fast
-              under real load, builds the web and mobile apps on top of them,
-              and ships everything through Docker and CI/CD.
-            </p>
-            <div class="hero__cta">
-              <a href="#contacts" class="btn">Contact me!!</a>
-              <a href="CV_Bayu Biantara.pdf" class="btn btn--ghost" target="_blank" rel="noreferrer">
-                Download CV
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="hero__visual hero__visual--term">
-            <span class="deco deco--square deco--float" data-parallax="0.08" aria-hidden="true"></span>
-            <div class="term" id="hero-term">
-              <div class="term__bar" aria-hidden="true"><i></i><i></i><i></i><span>bayu@portfolio: ~</span></div>
-              <div class="term__body" id="term-body"></div>
-              <form class="term__input" id="term-form" autocomplete="off">
-                <span class="term__ps">bayu@portfolio:~$</span>
-                <input id="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input" placeholder="type help" />
-              </form>
-            </div>
-            <span class="deco deco--dots deco--float delay" data-parallax="0.15" aria-hidden="true"></span>
-            <div class="hero__status">
-              <span class="dot" aria-hidden="true"></span>
-              <span>Currently working at <strong>Fuji Seat Indonesia</strong></span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= MARQUEE ================= -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <span>Laravel</span><span>CodeIgniter</span><span>React</span><span>Flutter</span><span>Docker</span><span>MySQL</span><span>PostgreSQL</span><span>SQL Server</span><span>REST API</span><span>CI/CD</span><span>Tailwind</span><span>Bootstrap</span>
-          <span>Laravel</span><span>CodeIgniter</span><span>React</span><span>Flutter</span><span>Docker</span><span>MySQL</span><span>PostgreSQL</span><span>SQL Server</span><span>REST API</span><span>CI/CD</span><span>Tailwind</span><span>Bootstrap</span>
-        </div>
-      </div>
-
-      <!-- ================= QUOTE ================= -->
-      <section class="quote">
-        <div class="container">
-          <div class="quote__box" data-reveal="scale">
-            <blockquote class="quote__text">Make it work, make it right, make it fast.</blockquote>
-            <div class="quote__author">- Kent Beck</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= PROJECTS ================= -->
-      <section class="section" id="projects">
-        <span class="deco deco--dots" style="right: -20px; top: 120px" data-parallax="0.2" aria-hidden="true"></span>
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>projects</h2>
-            <a class="section__link" href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer">
-              View GitHub
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+    <nav class="site-nav" id="site-nav">
+      <div class="page-frame">
+        <div class="site-nav__inner">
+          <div class="site-nav__left">
+            <a class="brand" href="#hero" aria-label="Bayu Biantara home">
+              <span class="brand__mark" aria-hidden="true">BB</span>
+              <span class="brand__name">Bayu<em>Biantara</em></span>
             </a>
+            <ul class="nav-links hud" aria-label="Primary">
+              <li><a href="#hero" class="is-active"><span>Home</span></a></li>
+              <li><a href="#projects"><span>Projects</span></a></li>
+              <li><a href="#services"><span>Services</span></a></li>
+              <li><a href="#experience"><span>Experience</span></a></li>
+              <li><a href="#about"><span>About</span></a></li>
+              <li class="sep"><a href="#contact"><span>Contact</span></a></li>
+            </ul>
           </div>
-
-          <div class="flow" id="projects-flow" aria-label="Project cover flow">
-            <div class="flow__track"></div>
-            <div class="flow__meta"><span class="flow__counter">01 / 11</span><span class="flow__hint">scroll to browse · click to jump</span></div>
+          <div class="site-nav__right">
+            <a class="nav-links hud" href="CV_Bayu Biantara.pdf" target="_blank" rel="noreferrer" style="display:flex;align-items:center;padding:0 10px;color:var(--muted)"><span>Resume</span></a>
+            <a class="nav-icon" href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a class="nav-icon" href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a class="nav-cta" href="#contact">Hire me</a>
+            <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+              <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+              <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19"/></svg>
+            </button>
           </div>
+        </div>
+      </div>
+    </nav>
 
-          <div class="showcase-layout">
-            <aside class="showcase-rail" data-reveal="left">
-              <p class="showcase-rail__intro">
-                Selected work, from HR and finance systems to logistics ERP and
-                mobile apps. Scroll the list or pick a project.
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#projects">Projects <span class="hud">01</span></a>
+      <a href="#services">Services <span class="hud">02</span></a>
+      <a href="#experience">Experience <span class="hud">03</span></a>
+      <a href="#about">About <span class="hud">04</span></a>
+      <a href="#contact">Contact <span class="hud">05</span></a>
+      <a href="CV_Bayu Biantara.pdf" target="_blank" rel="noreferrer">Resume <span class="hud">PDF</span></a>
+      <a class="mobile-menu__cta btn" href="#contact">Hire me</a>
+    </div>
+
+    <aside class="hud-rail" aria-hidden="true">
+      <div class="ruler" id="ruler">
+        <div class="ruler__cursor" id="ruler-cursor"><span><span class="digits" id="ruler-digits"></span>%</span></div>
+      </div>
+    </aside>
+    <nav class="sections-index" id="sections-index" aria-label="Sections"></nav>
+
+    <main id="main">
+      <div class="page-frame">
+        <!-- ================= HERO ================= -->
+        <section class="hero section" id="hero" data-index="Bayu">
+          <div class="hero__inner">
+            <div class="orbit" id="orbit" aria-hidden="true">
+              <svg class="orbit__rings" viewBox="0 0 1400 1400">
+                <circle cx="700" cy="700" r="230" />
+                <circle cx="700" cy="700" r="340" />
+                <circle cx="700" cy="700" r="460" />
+                <circle cx="700" cy="700" r="590" />
+                <circle cx="700" cy="700" r="690" />
+              </svg>
+            </div>
+            <div class="hero__content hero__content--left">
+              <div class="hero__halo"></div>
+              <p class="hero__eyebrow hud">Software engineer · since 2023 · Subang, ID</p>
+              <div class="wordmark" role="img" aria-label="BAYU">
+                <span class="wm-letter" aria-hidden="true">B</span><span class="wm-letter" aria-hidden="true">A</span><span class="wm-letter" aria-hidden="true">Y</span><span class="wm-letter" aria-hidden="true">U</span>
+              </div>
+              <h1 class="hero__title display">Software engineer <span class="serif">for the real world.</span></h1>
+              <p class="hero__lead">
+                I build backend services, databases that stay fast under load,
+                and the web and mobile apps that run on top of them.
               </p>
-              <nav class="showcase-tabs" id="projects-tabs" aria-label="Projects"></nav>
-              <p class="showcase-rail__count" id="projects-count"></p>
-            </aside>
-            <div class="showcase-list" id="projects-list"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= SKILLS ================= -->
-      <section class="section" id="skills">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>skills</h2>
-          </div>
-
-          <div class="skills__layout">
-            <div class="skills__art" aria-hidden="true">
-              <span class="deco deco--dots" style="left: 10px; top: 20px" data-parallax="0.12"></span>
-              <span class="deco deco--square" style="left: 180px; top: 0" data-parallax="0.2"></span>
-              <span class="deco deco--dots" style="left: 140px; top: 140px" data-parallax="0.08"></span>
-              <span class="deco deco--square deco--sm" style="left: 250px; top: 150px" data-parallax="0.3"></span>
-              <span class="deco deco--square is-purple deco--float" style="left: 30px; top: 170px" data-parallax="0.15"></span>
-            </div>
-
-            <div class="skills__grid">
-              <div class="skills__col">
-                <div class="skill-box" data-reveal style="--i: 0">
-                  <div class="skill-box__title">Languages</div>
-                  <div class="skill-box__list"><span>PHP</span><span>JavaScript</span><span>Dart</span><span>SQL</span></div>
-                </div>
-                <div class="skill-box" data-reveal style="--i: 3">
-                  <div class="skill-box__title">Other</div>
-                  <div class="skill-box__list"><span>REST API</span><span>Docker</span><span>CI/CD</span><span>Git</span></div>
-                </div>
+              <div class="hero__cta hero__cta--left">
+                <a class="btn" href="#projects">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+                  View projects
+                </a>
+                <a class="btn btn--ghost" href="CV_Bayu Biantara.pdf" target="_blank" rel="noreferrer">Download CV</a>
               </div>
-              <div class="skills__col">
-                <div class="skill-box" data-reveal style="--i: 1">
-                  <div class="skill-box__title">Databases</div>
-                  <div class="skill-box__list"><span>MySQL</span><span>PostgreSQL</span><span>SQL Server</span></div>
-                </div>
-                <div class="skill-box" data-reveal style="--i: 4">
-                  <div class="skill-box__title">Frameworks</div>
-                  <div class="skill-box__list"><span>Laravel</span><span>CodeIgniter</span><span>React</span><span>Flutter</span><span>Bootstrap</span><span>Tailwind</span></div>
-                </div>
-              </div>
-              <div class="skills__col">
-                <div class="skill-box" data-reveal style="--i: 2">
-                  <div class="skill-box__title">Tools</div>
-                  <div class="skill-box__list"><span>VS Code</span><span>GitHub</span><span>DBeaver</span><span>Navicat</span><span>Postman</span><span>Termius</span><span>Laragon</span></div>
-                </div>
+              <div class="hero__meta hero__meta--left hud">
+                <a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                  Open source on GitHub
+                </a>
+                <p>Subang · Indonesia</p>
+                <p>Backend · Mobile · Infra</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- ================= ABOUT ================= -->
-      <section class="section" id="about-me">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>about-me</h2>
+        <!-- ================= NOW ================= -->
+        <div class="now hud">
+          <span class="now__dot" aria-hidden="true"></span>
+          <span class="now__label">Now</span>
+          <span class="now__text">Building a manufacturing ERP at PT Fuji Seat Indonesia</span>
+          <span class="now__sep" aria-hidden="true">·</span>
+          <a class="now__link" href="#contact">Open to backend &amp; full stack roles →</a>
+        </div>
+
+        <!-- ================= MARQUEE ================= -->
+        <div class="marquee" aria-hidden="true">
+          <ul class="marquee__track hud" id="marquee-track">
+            <li>Laravel</li><li>CodeIgniter</li><li>NestJS</li><li>Express</li><li>React</li><li>Vue</li><li>Flutter</li><li>MySQL</li><li>PostgreSQL</li><li>SQL Server</li><li>Docker</li><li>CI/CD</li><li>REST API</li><li>Query tuning</li><li>Realtime</li>
+          </ul>
+          <ul class="marquee__track hud" aria-hidden="true">
+            <li>Laravel</li><li>CodeIgniter</li><li>NestJS</li><li>Express</li><li>React</li><li>Vue</li><li>Flutter</li><li>MySQL</li><li>PostgreSQL</li><li>SQL Server</li><li>Docker</li><li>CI/CD</li><li>REST API</li><li>Query tuning</li><li>Realtime</li>
+          </ul>
+        </div>
+
+        <!-- ================= PROJECTS ================= -->
+        <section class="section" id="projects" data-index="Projects">
+          <div class="strip hud"><span>01 / Selected work</span><span class="right">Twelve systems — HR, finance, logistics, education, hospitality</span></div>
+          <div class="section__intro">
+            <h2 class="section__title display" data-reveal>Systems that <span class="serif">earn their keep.</span></h2>
+            <p class="section__lead" data-reveal style="--i: 1">
+              Every project here runs for real users: HR teams, finance approvers,
+              couriers on the road, teachers in class. Pick one to see how it was
+              built.
+            </p>
+          </div>
+          <div class="filters hud" id="project-filters" aria-label="Filter projects">
+            <button type="button" class="is-active" data-filter="all">All <b>12</b></button>
+            <button type="button" data-filter="Web Application">Web</button>
+            <button type="button" data-filter="Mobile App">Mobile</button>
+            <button type="button" data-filter="Internal Tool">Internal</button>
+          </div>
+          <div class="featured" id="project-featured"></div>
+          <div class="grid-2" id="projects-grid"></div>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section class="section" id="services" data-index="Services">
+          <div class="strip hud"><span>02 / What I do</span><span class="right">Backend first — the rest follows</span></div>
+          <div class="section__intro">
+            <h2 class="section__title display" data-reveal>Built for load, <span class="serif">not for demos.</span></h2>
+            <p class="section__lead" data-reveal style="--i: 1">
+              Three things I do well, and the tools I reach for when I do them.
+            </p>
+          </div>
+          <div class="grid-3">
+            <div class="service" data-reveal>
+              <span class="service__letter hud">A</span>
+              <h3 class="display">Backend &amp; APIs</h3>
+              <p>Business logic, layered approvals, integrations with payment and accounting providers, and APIs that web and mobile clients can rely on.</p>
+              <div class="service__list"><span class="chip">Laravel</span><span class="chip">CodeIgniter</span><span class="chip">NestJS</span><span class="chip">Express + TS</span></div>
+            </div>
+            <div class="service" data-reveal style="--i: 1">
+              <span class="service__letter hud">B</span>
+              <h3 class="display">Databases &amp; performance</h3>
+              <p>Schema design, query tuning, ETL and scheduling on millions of rows, realtime features that stay responsive, and the servers they run on.</p>
+              <div class="service__list"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">Docker</span><span class="chip">CI/CD</span></div>
+            </div>
+            <div class="service" data-reveal style="--i: 2">
+              <span class="service__letter hud">C</span>
+              <h3 class="display">Mobile &amp; web apps</h3>
+              <p>Flutter apps for couriers, teachers, and cashiers, plus React and Vue front ends that talk to the same backend.</p>
+              <div class="service__list"><span class="chip">Flutter</span><span class="chip">React</span><span class="chip">Vue</span><span class="chip">Tailwind</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= EXPERIENCE ================= -->
+        <section class="section" id="experience" data-index="Experience">
+          <div class="strip hud"><span>03 / Experience</span><span class="right">2023 — present · four companies</span></div>
+          <div class="section__intro">
+            <h2 class="section__title display" data-reveal>From HR systems <span class="serif">to the factory floor.</span></h2>
           </div>
 
-          <div class="about__layout">
-            <div class="about__text" data-reveal="left">
-              <p>Hello, i'm Bayu!</p>
-              <p>
+          <div class="xp" data-reveal>
+            <div class="xp__when hud">Sep 2026 — Present<br /><span class="chip chip--accent">Current</span></div>
+            <div>
+              <h3 class="xp__role display">Software Engineer</h3>
+              <p class="xp__org"><b>PT Fuji Seat Indonesia</b><br />Automotive manufacturing</p>
+            </div>
+            <ul class="xp__list">
+              <li>Develop and extend the in-house ERP for production manufacturing: planning, work orders, material and inventory movement, shop-floor reporting.</li>
+              <li>Design database structures and tune queries so production dashboards stay fast on large transactional data.</li>
+              <li>Integrate ERP modules with line-side systems so production data flows in near real time.</li>
+            </ul>
+          </div>
+
+          <div class="xp" data-reveal>
+            <div class="xp__when hud">Oct 2024 — Sep 2026</div>
+            <div>
+              <h3 class="xp__role display">Programmer Specialist</h3>
+              <p class="xp__org"><b>PT Yapindo Transportama</b><br />PCP Express · logistics</p>
+            </div>
+            <ul class="xp__list">
+              <li>Backend logic and APIs for web and mobile, including the courier app and the operational dashboard on millions of shipment records.</li>
+              <li>Docker-based deployments with CI/CD, container management, and release versioning.</li>
+              <li>Order management module of a new TypeScript ERP: POS, bulk orders, client API.</li>
+            </ul>
+          </div>
+
+          <div class="xp" data-reveal>
+            <div class="xp__when hud">Aug 2024 — Oct 2024</div>
+            <div>
+              <h3 class="xp__role display">Backend Developer</h3>
+              <p class="xp__org"><b>PT Digital Access Indonesia</b></p>
+            </div>
+            <ul class="xp__list">
+              <li>API logic for web applications, custom libraries and packages for reuse.</li>
+              <li>Payment gateway integration for smooth, secure transactions.</li>
+            </ul>
+          </div>
+
+          <div class="xp" data-reveal>
+            <div class="xp__when hud">Mar 2023 — Aug 2024</div>
+            <div>
+              <h3 class="xp__role display">HR Information System</h3>
+              <p class="xp__org"><b>PT Uni-Charm Indonesia Tbk</b><br />FMCG manufacturing</p>
+            </div>
+            <ul class="xp__list">
+              <li>Designed and shipped web systems for HR: recruitment site, business travel requests, attendance, employee directory.</li>
+              <li>Monitored performance and data integrity, tested new features, trained users.</li>
+            </ul>
+          </div>
+
+          <div class="edu">
+            <div data-reveal>
+              <span class="hud faint">Education</span>
+              <h3 class="display">Universitas Buana Perjuangan Karawang</h3>
+              <p>Bachelor of Informatics Engineering · 2018 — 2022</p>
+            </div>
+            <div data-reveal style="--i: 1">
+              <span class="hud faint">Organisation</span>
+              <h3 class="display">BIPROTIK</h3>
+              <p>Treasurer · managed cash flow and supervised transactions · 2020</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="section" id="about" data-index="About">
+          <div class="strip hud"><span>04 / About</span><span class="right">Subang, Jawa Barat</span></div>
+          <div class="about">
+            <div class="about__text">
+              <h2 class="section__title display" data-reveal>Hello, <span class="serif">I'm Bayu.</span></h2>
+              <p data-reveal style="--i: 1">
                 I'm a software engineer based in Subang, Indonesia, with an
                 Informatics Engineering degree from Universitas Buana Perjuangan
-                Karawang. I design the parts of a system that have to keep
-                working when the data gets big: backend architecture, database
-                design, and the APIs that web and mobile clients depend on.
+                Karawang. I design the parts of a system that have to keep working
+                when the data gets big: backend architecture, database design, and
+                the APIs that web and mobile clients depend on.
               </p>
-              <p>
+              <p data-reveal style="--i: 2">
                 I tune slow queries until they are fast, build realtime features
                 that stay responsive under load, manage large production
-                databases, and configure the servers and containers they run
-                on. I care about systems that are secure, maintainable, and
-                simple for the people who use them.
+                databases, and configure the servers and containers they run on.
+                I care about systems that are secure, maintainable, and simple
+                for the people who use them.
               </p>
-              <a href="CV_Bayu Biantara.pdf" class="btn" target="_blank" rel="noreferrer">
-                Read CV
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
-              </a>
-
-              <div class="about__facts">
-                <div class="fact" data-reveal style="--i: 1">
-                  <div class="fact__num"><span data-count="3">0</span><span class="accent">+</span></div>
-                  <div class="fact__label">years of experience</div>
-                </div>
-                <div class="fact" data-reveal style="--i: 2">
-                  <div class="fact__num"><span data-count="4">0</span></div>
-                  <div class="fact__label">companies worked with</div>
-                </div>
-                <div class="fact" data-reveal style="--i: 3">
-                  <div class="fact__num"><span data-count="7">0</span><span class="accent">+</span></div>
-                  <div class="fact__label">systems shipped</div>
-                </div>
+              <div class="hero__cta" style="justify-content:flex-start;margin-top:28px" data-reveal>
+                <a class="btn" href="CV_Bayu Biantara.pdf" target="_blank" rel="noreferrer">Read the CV</a>
+                <a class="btn btn--ghost" href="#contact">Get in touch</a>
               </div>
             </div>
-
-            <div class="about__visual" data-reveal="right">
-              <span class="deco deco--dots top" data-parallax="0.1" aria-hidden="true"></span>
-              <div class="about__photo">
-                <img src="assets/img/foto.png" alt="Bayu Biantara" loading="lazy" />
-              </div>
-              <span class="deco deco--dots bottom" data-parallax="0.18" aria-hidden="true"></span>
-              <span class="deco deco--line" aria-hidden="true"></span>
+            <div class="about__photo" data-reveal="none">
+              <img src="assets/img/foto.png" alt="Bayu Biantara" loading="lazy" />
+              <span class="tag hud">Bayu Biantara · Software Engineer</span>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- ================= EXPERIENCE ================= -->
-      <section class="section" id="experience">
-        <span class="deco deco--square deco--lg" style="left: -40px; top: 80px" data-parallax="0.15" aria-hidden="true"></span>
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>experience</h2>
+          <div class="facts">
+            <div data-reveal><div class="num display"><span data-count="3">0</span><span class="accent">+</span></div><div class="label">years building production systems</div></div>
+            <div data-reveal style="--i: 1"><div class="num display"><span data-count="12">0</span></div><div class="label">projects shipped, web and mobile</div></div>
+            <div data-reveal style="--i: 2"><div class="num display"><span data-count="4">0</span></div><div class="label">companies, from FMCG to logistics</div></div>
           </div>
+        </section>
 
-          <div class="exp__layout">
-            <div class="timeline">
-              <span class="timeline__progress" aria-hidden="true"></span>
-
-              <article class="tl-item is-current" data-reveal style="--i: 0">
-                <div class="tl-item__head">
-                  <h3 class="tl-item__role">Software Engineer <span class="tl-item__badge">current</span></h3>
-                  <span class="tl-item__date">Sep 2026 — Present</span>
-                </div>
-                <p class="tl-item__company"><strong>PT Fuji Seat Indonesia</strong> (Automotive Manufacturing)</p>
-                <ul class="tl-item__list">
-                  <li>Develop and extend the in-house ERP for production manufacturing: production planning, work orders, material and inventory movement, and shop-floor reporting.</li>
-                  <li>Design database structures and tune queries so production dashboards stay fast on large transactional data.</li>
-                  <li>Build integrations between ERP modules and line-side systems so production data flows in near real time.</li>
-                  <li>Maintain application servers and deployments, and support production users on the factory floor.</li>
-                </ul>
-              </article>
-
-              <article class="tl-item" data-reveal style="--i: 1">
-                <div class="tl-item__head">
-                  <h3 class="tl-item__role">Programmer Specialist</h3>
-                  <span class="tl-item__date">Oct 2024 — Sep 2026</span>
-                </div>
-                <p class="tl-item__company"><strong>PT Yapindo Transportama</strong> (PCP Express)</p>
-                <ul class="tl-item__list">
-                  <li>Maintain and improve running systems that support daily company operations.</li>
-                  <li>Design and build backend logic and APIs used by web and mobile applications.</li>
-                  <li>Develop mobile apps integrated with the backend to support business needs.</li>
-                  <li>Deploy applications with Docker: Dockerfile, docker-compose, and container management.</li>
-                  <li>Manage releases and versioning through a Docker-based CI/CD pipeline.</li>
-                </ul>
-              </article>
-
-              <article class="tl-item" data-reveal style="--i: 2">
-                <div class="tl-item__head">
-                  <h3 class="tl-item__role">Backend Developer</h3>
-                  <span class="tl-item__date">Aug 2024 — Oct 2024</span>
-                </div>
-                <p class="tl-item__company"><strong>PT Digital Access Indonesia</strong></p>
-                <ul class="tl-item__list">
-                  <li>Designed and developed API logic to support web application requirements.</li>
-                  <li>Built custom libraries and packages to improve project efficiency and scalability.</li>
-                  <li>Integrated payment gateways to keep transactions smooth and secure.</li>
-                </ul>
-              </article>
-
-              <article class="tl-item" data-reveal style="--i: 3">
-                <div class="tl-item__head">
-                  <h3 class="tl-item__role">HR Information System</h3>
-                  <span class="tl-item__date">Mar 2023 — Aug 2024</span>
-                </div>
-                <p class="tl-item__company"><strong>PT Uni-Charm Indonesia Tbk</strong> (FMCG Manufacture)</p>
-                <ul class="tl-item__list">
-                  <li>Designed, developed, and implemented web-based applications and systems for HR.</li>
-                  <li>Built and maintained the web-based employee attendance system.</li>
-                  <li>Monitored website performance, data security, and integrity.</li>
-                  <li>Tested new features, handled user issues, and provided technical training.</li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="exp__side">
-              <div class="edu-card" data-reveal="right" style="--i: 1">
-                <span class="deco deco--dots" aria-hidden="true"></span>
-                <span class="edu-card__kicker">#education</span>
-                <h3>Universitas Buana Perjuangan Karawang</h3>
-                <p>Bachelor of Informatics Engineering</p>
-                <p class="tl-item__date">Sep 2018 — Jun 2022</p>
-              </div>
-              <div class="edu-card" data-reveal="right" style="--i: 2">
-                <span class="edu-card__kicker">#organisation</span>
-                <h3>BIPROTIK</h3>
-                <p>Treasurer. Managed cash flow and supervised financial transactions.</p>
-                <p class="tl-item__date">Jan 2020 — Mar 2020</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= CONTACTS ================= -->
-      <section class="section" id="contacts">
-        <span class="deco deco--dots" style="left: -10px; bottom: 40px" data-parallax="0.12" aria-hidden="true"></span>
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>contacts</h2>
-          </div>
-
-          <div class="contact__layout">
-            <div data-reveal="left">
-              <p class="contact__intro">
-                I'm open to backend and full stack opportunities. If you have a
-                project, a question, or just want to say hi, drop a message
-                and I'll get back to you.
+        <!-- ================= CONTACT ================= -->
+        <section class="section" id="contact" data-index="Contact">
+          <div class="strip hud"><span>05 / Contact</span><span class="right">Open to backend and full stack roles</span></div>
+          <div class="contact">
+            <div class="contact__left">
+              <h2 class="section__title display" data-reveal>Let's build <span class="serif">something solid.</span></h2>
+              <p data-reveal style="--i: 1">
+                Have a system that needs to scale, a project to ship, or a role
+                to fill? Send a message and I'll reply within a day.
               </p>
-              <div class="contact__box">
-                <h4>Message me here</h4>
+              <div class="contact__links" data-reveal style="--i: 2">
                 <a href="mailto:bayubiantara0@gmail.com">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg>
-                  bayubiantara0@gmail.com
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg>
+                  bayubiantara0@gmail.com <span class="hud">Email</span>
                 </a>
                 <a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-                  +62 851 5632 8213
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                  +62 851 5632 8213 <span class="hud">WhatsApp</span>
                 </a>
                 <a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-                  linkedin.com/in/bayu-biantara
-                </a>
-                <a href="https://maps.google.com/?q=Subang+Jawa+Barat" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-                  Subang, Jawa Barat
+                  linkedin.com/in/bayu-biantara <span class="hud">LinkedIn</span>
                 </a>
               </div>
             </div>
-
-            <form class="form" id="contactForm" data-reveal="right" novalidate>
+            <form class="form" id="contactForm" novalidate data-reveal style="--i: 1">
               <div class="form__row">
-                <div class="field"><input type="text" id="fname" name="fname" placeholder="First name" required /></div>
-                <div class="field"><input type="text" id="lname" name="lname" placeholder="Last name" required /></div>
+                <div class="field"><label class="hud" for="fname">First name</label><input type="text" id="fname" name="fname" required /></div>
+                <div class="field"><label class="hud" for="lname">Last name</label><input type="text" id="lname" name="lname" required /></div>
               </div>
               <div class="form__row">
-                <div class="field"><input type="email" id="email" name="email" placeholder="Email" required /></div>
-                <div class="field"><input type="tel" id="phone" name="phone" placeholder="Phone (optional)" /></div>
+                <div class="field"><label class="hud" for="email">Email</label><input type="email" id="email" name="email" required /></div>
+                <div class="field"><label class="hud" for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" /></div>
               </div>
-              <div class="field"><textarea id="message" name="message" placeholder="Message" required></textarea></div>
+              <div class="field"><label class="hud" for="message">Message</label><textarea id="message" name="message" required></textarea></div>
               <div class="form__msg" id="form-message" aria-live="polite"></div>
-              <div>
-                <button type="submit" class="btn">
-                  Send message
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
-                </button>
-              </div>
+              <div><button type="submit" class="btn">Send message</button></div>
             </form>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="cta">
+          <p class="hud" data-reveal>Available for work · remote or Jawa Barat</p>
+          <h2 class="cta__title display" data-reveal style="--i: 1">Start <span class="serif">building.</span></h2>
+          <p class="cta__lead" data-reveal style="--i: 2">Browse the projects, read the CV, or just say hello. Your reply is a day away.</p>
+          <div class="cta__buttons" data-reveal style="--i: 3">
+            <a class="btn" href="#projects">Browse projects</a>
+            <a class="btn btn--ghost" href="mailto:bayubiantara0@gmail.com">Email me</a>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <div class="site-footer__top">
+      <div class="page-frame">
+        <div class="site-footer__grid">
           <div class="site-footer__brand">
-            <div class="row">
-              <a class="brand" href="#home">
-                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                  <rect x="0" y="0" width="7" height="7" /><rect x="9" y="0" width="7" height="7" /><rect x="0" y="9" width="7" height="7" /><rect x="9" y="9" width="7" height="7" fill="#58a6ff" />
-                </svg>
-                <span>Bayu</span>
-              </a>
-              <a class="email" href="mailto:bayubiantara0@gmail.com">bayubiantara0@gmail.com</a>
-            </div>
-            <p>Backend and full stack developer</p>
+            <a class="brand brand--footer" href="#hero"><span class="brand__mark" aria-hidden="true">BB</span><span class="brand__name">Bayu<em>Biantara</em></span></a>
+            <p>Software engineer building backend services, databases, and the apps on top of them.</p>
+            <a class="hud" href="mailto:bayubiantara0@gmail.com">bayubiantara0@gmail.com</a>
           </div>
-          <div class="site-footer__media">
-            <h4>Media</h4>
-            <div class="links">
-              <a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-              </a>
-              <a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
-              </a>
-            </div>
+          <div>
+            <h4 class="hud">Navigate</h4>
+            <ul>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="hud">Projects</h4>
+            <ul id="footer-projects"></ul>
+          </div>
+          <div>
+            <h4 class="hud">Elsewhere</h4>
+            <ul>
+              <li><a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer">WhatsApp</a></li>
+              <li><a href="CV_Bayu Biantara.pdf" target="_blank" rel="noreferrer">CV (PDF)</a></li>
+            </ul>
           </div>
         </div>
-        <p class="site-footer__copy">&copy; Copyright <span data-year>2026</span>. Made by Bayu Biantara</p>
+        <div class="site-footer__bottom hud">
+          <span>© <span data-year>2026</span> Bayu Biantara</span>
+          <span>Subang, Jawa Barat · Indonesia</span>
+        </div>
       </div>
     </footer>
 
-    <button class="to-top" type="button" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 20V4m0 0l-6 6m6-6l6 6"/></svg>
+    <button class="to-top hud" type="button" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V4m0 0-6 6m6-6 6 6"/></svg>
+      Top
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox__close" type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <img src="" alt="" />
+    </div>
+
     <script src="assets/js/projects-data.js"></script>
-    <script>
-      (function () {
-        var list = document.getElementById("projects-list");
-        var tabs = document.getElementById("projects-tabs");
-        if (!list || !tabs || !window.PROJECTS) return;
-        var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-        var pad = function (n) { return (n < 10 ? "0" : "") + n; };
-
-        tabs.innerHTML = window.PROJECTS.map(function (p, i) {
-          return '<button class="showcase-tab' + (i === 0 ? " is-active" : "") + '" type="button" data-target="p-' + p.slug + '"><b>' + pad(i + 1) + "</b>" + esc(p.title) + "</button>";
-        }).join("");
-        document.getElementById("projects-count").textContent = window.PROJECTS.length + " projects";
-
-        list.innerHTML = window.PROJECTS.map(function (p, i) {
-          var href = "project-details.html?project=" + p.slug;
-          return '<article class="panel' + (i === 0 ? " is-active" : "") + '" id="p-' + p.slug + '" data-reveal>' +
-            '<div class="panel__media">' + window.renderStage(p, { large: true }) + "</div>" +
-            '<div class="panel__body">' +
-            '<div class="panel__meta"><span class="chip is-primary">' + esc(p.category) + '</span><span class="chip">' + esc(p.year) + "</span>" +
-            p.tags.map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("") + "</div>" +
-            '<h3 class="panel__title"><b>' + pad(i + 1) + "</b>" + esc(p.title) + "</h3>" +
-            '<p class="panel__desc">' + esc(p.short) + "</p>" +
-            '<div class="panel__actions"><a href="' + href + '" class="btn btn--sm">Details &lt;~&gt;</a>' +
-            (p.live ? '<a href="' + esc(p.live) + '" class="btn btn--sm btn--ghost" target="_blank" rel="noreferrer">Live ~&gt;</a>' : "") +
-            "</div></div>" +
-            '<a class="panel__link" href="' + href + '" aria-label="Open ' + esc(p.title) + '"></a></article>';
-        }).join("");
-
-        var tabEls = Array.prototype.slice.call(tabs.querySelectorAll(".showcase-tab"));
-        var panels = Array.prototype.slice.call(list.querySelectorAll(".panel"));
-
-        function activate(id) {
-          tabEls.forEach(function (t) { t.classList.toggle("is-active", t.getAttribute("data-target") === id); });
-          panels.forEach(function (p) { p.classList.toggle("is-active", p.id === id); });
-          var active = tabs.querySelector(".is-active");
-          if (active && tabs.scrollWidth > tabs.clientWidth) {
-            tabs.scrollTo({ left: active.offsetLeft - tabs.clientWidth / 2 + active.offsetWidth / 2, behavior: "smooth" });
-          }
-        }
-
-        tabs.addEventListener("click", function (e) {
-          var t = e.target.closest(".showcase-tab");
-          if (!t) return;
-          var el = document.getElementById(t.getAttribute("data-target"));
-          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-
-        if ("IntersectionObserver" in window) {
-          var spy = new IntersectionObserver(function (entries) {
-            entries.forEach(function (en) { if (en.isIntersecting) activate(en.target.id); });
-          }, { rootMargin: "-35% 0px -55% 0px" });
-          panels.forEach(function (p) { spy.observe(p); });
-        }
-      })();
-    </script>
-    <script src="assets/js/app.js"></script>
     <script src="assets/js/vendor/gsap.min.js"></script>
     <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
     <script src="assets/js/vendor/lenis.min.js"></script>
-    <script src="assets/js/motion.js"></script>
-    <script src="assets/js/ui.js"></script>
-    <script src="assets/js/terminal.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="assets/js/contact-form.js"></script>
   </body>
 </html>

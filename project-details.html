@@ -4,184 +4,180 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Project case study by Bayu Biantara." />
-    <meta name="theme-color" content="#282c33" />
+    <meta name="theme-color" content="#f2f1ee" />
     <title>Project — Bayu Biantara</title>
 
-    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/img/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500;600;700&display=swap"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <div class="preloader" aria-hidden="true">
-      <div>
-        <div class="preloader__text">bayu.dev</div>
-        <div class="preloader__bar"></div>
-        <div class="preloader__count" aria-hidden="true">0</div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <nav class="site-nav" id="site-nav">
+      <div class="page-frame">
+        <div class="site-nav__inner">
+          <div class="site-nav__left">
+            <a class="brand" href="index.html" aria-label="Bayu Biantara home">
+              <span class="brand__mark" aria-hidden="true">BB</span>
+              <span class="brand__name">Bayu<em>Biantara</em></span>
+            </a>
+            <ul class="nav-links hud" aria-label="Primary">
+              <li><a href="index.html#hero"><span>Home</span></a></li>
+              <li><a href="index.html#projects" class="is-active"><span>Projects</span></a></li>
+              <li><a href="index.html#services"><span>Services</span></a></li>
+              <li><a href="index.html#experience"><span>Experience</span></a></li>
+              <li><a href="index.html#about"><span>About</span></a></li>
+              <li class="sep"><a href="index.html#contact"><span>Contact</span></a></li>
+            </ul>
+          </div>
+          <div class="site-nav__right">
+            <a class="nav-icon" href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a class="nav-icon" href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a class="nav-cta" href="index.html#contact">Hire me</a>
+            <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+              <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+              <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#projects">Projects <span class="hud">01</span></a>
+      <a href="index.html#services">Services <span class="hud">02</span></a>
+      <a href="index.html#experience">Experience <span class="hud">03</span></a>
+      <a href="index.html#about">About <span class="hud">04</span></a>
+      <a href="index.html#contact">Contact <span class="hud">05</span></a>
+      <a class="mobile-menu__cta btn" href="index.html#contact">Hire me</a>
     </div>
 
-    <div class="bg-grid" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <aside class="side-rail" aria-label="Social links">
-      <a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-      </a>
-      <a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
-      </a>
-    </aside>
-
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="index.html" aria-label="Bayu Biantara home">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-            <rect x="0" y="0" width="7" height="7" /><rect x="9" y="0" width="7" height="7" /><rect x="0" y="9" width="7" height="7" /><rect x="9" y="9" width="7" height="7" fill="#58a6ff" />
-          </svg>
-          <span>Bayu</span>
-        </a>
-
-        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        </button>
-
-        <nav class="site-nav" aria-label="Primary">
-          <a href="index.html#home"><span class="hash">#</span><span data-scramble>home</span></a>
-          <a href="index.html#projects" class="is-active"><span class="hash">#</span><span data-scramble>projects</span></a>
-          <a href="index.html#skills"><span class="hash">#</span><span data-scramble>skills</span></a>
-          <a href="index.html#about-me"><span class="hash">#</span><span data-scramble>about-me</span></a>
-          <a href="index.html#experience"><span class="hash">#</span><span data-scramble>experience</span></a>
-          <a href="index.html#contacts"><span class="hash">#</span><span data-scramble>contacts</span></a>
-        </nav>
+    <aside class="hud-rail" aria-hidden="true">
+      <div class="ruler" id="ruler">
+        <div class="ruler__cursor" id="ruler-cursor"><span><span class="digits" id="ruler-digits"></span>%</span></div>
       </div>
-    </header>
+    </aside>
+    <nav class="sections-index" id="sections-index" aria-label="Sections"></nav>
 
-    <main id="project-root">
-      <section class="detail-hero">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal="none" style="--i: 0">
-            <a href="index.html">home</a>
-            <span class="sep">/</span>
-            <a href="index.html#projects">projects</a>
-            <span class="sep">/</span>
-            <span data-field="title">…</span>
-          </nav>
-          <span class="detail-hero__kicker" data-reveal style="--i: 1">#project</span>
-          <h1 class="detail-hero__title" data-field="title" data-reveal style="--i: 2">Loading project…</h1>
-          <p class="detail-hero__sub" data-field="short" data-reveal style="--i: 3"></p>
-          <div class="chips" data-field="chips" data-reveal style="--i: 4"></div>
-        </div>
-      </section>
-
-      <section class="showcase">
-        <div class="container">
-          <div class="showcase__stage" data-reveal="scale">
-            <span class="deco deco--square is-purple deco--float" data-parallax="0.1" aria-hidden="true"></span>
-            <span class="deco deco--dots" data-parallax="0.18" aria-hidden="true"></span>
-            <div data-field="stage"></div>
+    <main id="main">
+      <div class="page-frame">
+        <section class="section" id="overview" data-index="Overview">
+          <div class="strip hud"><span id="strip-left">01 / Project</span><span class="right" id="strip-right"></span></div>
+          <div class="detail-hero">
+            <div class="detail-hero__icon" data-field="icon" data-reveal>BY</div>
+            <div class="detail-hero__badge" data-reveal style="--i: 1"><b data-field="num">01</b><span data-field="title">Project</span></div>
+            <h1 class="detail-hero__title display" data-field="heading" data-reveal style="--i: 2">Loading project…</h1>
+            <p class="detail-hero__lead" data-field="short" data-reveal style="--i: 3"></p>
+            <div class="detail-hero__chips" data-field="chips" data-reveal style="--i: 4"></div>
+            <div class="detail-hero__cta" data-field="cta" data-reveal style="--i: 5">
+              <a class="btn btn--ghost" href="index.html#projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></svg>
+                All projects
+              </a>
+            </div>
           </div>
-          <div class="thumbs" data-field="thumbs" data-reveal style="--i: 2"></div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section">
-        <div class="container">
+        <section class="section" id="screens" data-index="Screens">
+          <div class="strip hud"><span>02 / Screenshots</span><span class="right" data-field="captured">Captured in the app</span></div>
+          <div class="showcase">
+            <div class="showcase__stage" data-reveal="none">
+              <div data-field="stage"></div>
+            </div>
+            <div class="thumbs" data-field="thumbs"></div>
+          </div>
+        </section>
+
+        <section class="section" id="highlights" data-index="Highlights">
+          <div class="strip hud"><span>03 / Highlights</span><span class="right">What's inside</span></div>
+          <div class="grid-3" data-field="features"></div>
+        </section>
+
+        <section class="section" id="story" data-index="Story">
+          <div class="strip hud"><span>04 / The story</span><span class="right">Context, role, and outcome</span></div>
           <div class="detail-grid">
-            <div class="prose" data-reveal="left">
-              <h3><span class="hash">#</span>about-the-project</h3>
+            <div class="prose">
+              <h2 class="section__title display" data-reveal>About <span class="serif">the project.</span></h2>
               <div data-field="about"></div>
             </div>
-            <aside class="info-card" data-reveal="right">
-              <div class="info-card__title">Project details</div>
-              <div class="info-card__list" data-field="info"></div>
-              <div class="info-card__cta" data-field="cta">
-                <a href="index.html#contacts" class="btn btn--sm">
-                  Discuss a similar project
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
-                </a>
-              </div>
+            <aside class="info" data-reveal style="--i: 1">
+              <div data-field="info"></div>
+              <div data-field="info-cta"></div>
             </aside>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>key-features</h2>
-          </div>
-          <div class="feature-grid" data-field="features"></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title"><span class="hash">#</span>tech-stack</h2>
-          </div>
+        <section class="section" id="stack-section" data-index="Stack">
+          <div class="strip hud"><span>05 / Stack</span><span class="right">Tools used on this project</span></div>
           <div class="stack" data-field="stack"></div>
-
           <div class="pager" data-field="pager"></div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <div class="site-footer__top">
+      <div class="page-frame">
+        <div class="site-footer__grid">
           <div class="site-footer__brand">
-            <div class="row">
-              <a class="brand" href="index.html">
-                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                  <rect x="0" y="0" width="7" height="7" /><rect x="9" y="0" width="7" height="7" /><rect x="0" y="9" width="7" height="7" /><rect x="9" y="9" width="7" height="7" fill="#58a6ff" />
-                </svg>
-                <span>Bayu</span>
-              </a>
-              <a class="email" href="mailto:bayubiantara0@gmail.com">bayubiantara0@gmail.com</a>
-            </div>
-            <p>Backend and full stack developer</p>
+            <a class="brand brand--footer" href="index.html"><span class="brand__mark" aria-hidden="true">BB</span><span class="brand__name">Bayu<em>Biantara</em></span></a>
+            <p>Software engineer building backend services, databases, and the apps on top of them.</p>
+            <a class="hud" href="mailto:bayubiantara0@gmail.com">bayubiantara0@gmail.com</a>
           </div>
-          <div class="site-footer__media">
-            <h4>Media</h4>
-            <div class="links">
-              <a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-              </a>
-              <a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
-              </a>
-            </div>
+          <div>
+            <h4 class="hud">Navigate</h4>
+            <ul>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#experience">Experience</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="hud">Projects</h4>
+            <ul id="footer-projects"></ul>
+          </div>
+          <div>
+            <h4 class="hud">Elsewhere</h4>
+            <ul>
+              <li><a href="https://github.com/bayubiantara0" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/bayu-biantara/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://wa.me/6285156328213" target="_blank" rel="noreferrer">WhatsApp</a></li>
+              <li><a href="CV_Bayu Biantara.pdf" target="_blank" rel="noreferrer">CV (PDF)</a></li>
+            </ul>
           </div>
         </div>
-        <p class="site-footer__copy">&copy; Copyright <span data-year>2026</span>. Made by Bayu Biantara</p>
+        <div class="site-footer__bottom hud">
+          <span>© <span data-year>2026</span> Bayu Biantara</span>
+          <span>Subang, Jawa Barat · Indonesia</span>
+        </div>
       </div>
     </footer>
 
+    <button class="to-top hud" type="button" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V4m0 0-6 6m6-6 6 6"/></svg>
+      Top
+    </button>
+
     <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
       <button class="lightbox__close" type="button" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
       </button>
       <img src="" alt="" />
     </div>
-
-    <button class="to-top" type="button" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 20V4m0 0l-6 6m6-6l6 6"/></svg>
-    </button>
 
     <script src="assets/js/projects-data.js"></script>
     <script>
@@ -198,62 +194,69 @@
             return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
           });
         }
+        var pad = function (n) { return (n < 10 ? "0" : "") + n; };
 
         document.title = p.title + " — Bayu Biantara";
         document.querySelector('meta[name="description"]').setAttribute("content", p.short);
-        document.querySelectorAll('[data-field="title"]').forEach(function (n) { n.textContent = p.title; });
+        document.getElementById("strip-left").textContent = pad(idx + 1) + " / " + p.category;
+        document.getElementById("strip-right").textContent = p.client + " · " + p.year;
+        el("icon").textContent = p.title.split(/\s+/).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase();
+        el("icon").style.background = p.accent || "";
+        el("num").textContent = pad(idx + 1);
+        el("title").textContent = p.title;
+
+        // heading: title + serif accent built from the category
+        var tail = { "Mobile App": "on the phone.", "Web Application": "on the web.", "Internal Tool": "for the team." }[p.category] || "in production.";
+        el("heading").innerHTML = esc(p.title) + ' <span class="serif">' + esc(tail) + "</span>";
         el("short").textContent = p.short;
 
         el("chips").innerHTML =
-          '<span class="chip is-primary">' + esc(p.category) + "</span>" +
+          '<span class="chip chip--accent">' + esc(p.category) + "</span>" +
           '<span class="chip">' + esc(p.year) + "</span>" +
-          '<span class="chip">' + esc(p.status) + "</span>" +
+          '<span class="chip' + (/live|production/i.test(p.status) ? " chip--ok" : "") + '">' + esc(p.status) + "</span>" +
           p.tags.map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("");
 
+        if (p.live) {
+          el("cta").insertAdjacentHTML("afterbegin", '<a class="btn" href="' + esc(p.live) + '" target="_blank" rel="noreferrer">Open live site</a>');
+        }
+
         el("stage").outerHTML = window.renderStage(p, { lightbox: true, eager: true, large: true });
+        el("captured").textContent = p.gallery.length + (p.gallery.length > 1 ? " screens" : " screen") + " · captured in the app";
 
         var thumbs = el("thumbs");
         if (p.gallery.length > 1) {
           thumbs.innerHTML = p.gallery.map(function (g) {
-            return '<button class="thumb" type="button" data-lightbox="' + esc(g.src) + '" data-lightbox-alt="' + esc(p.title + " \u2014 " + g.label) + '">' +
-              '<img src="' + esc(g.src) + '" alt="" loading="lazy" /><span class="thumb__label">' + esc(g.label) + "</span></button>";
+            return '<button class="thumb" type="button" data-lightbox="' + esc(g.src) + '" data-lightbox-alt="' + esc(p.title + " — " + g.label) + '">' +
+              '<img src="' + esc(g.src) + '" alt="" loading="lazy" /><span class="thumb__label hud">' + esc(g.label) + "</span></button>";
           }).join("");
         } else {
           thumbs.remove();
         }
 
-        el("about").innerHTML = p.about.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("");
-
-        el("info").innerHTML = [
-          ["Client", p.client], ["Year", p.year], ["Role", p.role], ["Status", p.status], ["Category", p.category]
-        ].map(function (r) {
-          return '<div class="info-card__row"><span>' + r[0] + "</span><span>" + esc(r[1]) + "</span></div>";
-        }).join("");
-
         el("features").innerHTML = p.features.map(function (f, i) {
-          return '<div class="feature" data-reveal style="--i:' + i + '"><span class="feature__num">0' + (i + 1) + "</span><h4>" + esc(f.t) + "</h4><p>" + esc(f.d) + "</p></div>";
+          return '<div class="feature" data-reveal style="--i:' + (i % 3) + '"><span class="num hud">' + pad(i + 1) + "</span><h4 class=\"display\">" + esc(f.t) + "</h4><p>" + esc(f.d) + "</p></div>";
         }).join("");
+
+        el("about").innerHTML = p.about.map(function (t, i) { return '<p data-reveal style="--i:' + (i + 1) + '">' + esc(t) + "</p>"; }).join("");
+
+        el("info").innerHTML = [["Client", p.client], ["Year", p.year], ["Role", p.role], ["Status", p.status], ["Category", p.category]]
+          .map(function (r) { return '<div class="info__row"><span class="hud">' + r[0] + "</span><span>" + esc(r[1]) + "</span></div>"; }).join("");
+        el("info-cta").innerHTML = '<a class="btn btn--sm" href="index.html#contact">Discuss a similar project</a>';
 
         el("stack").innerHTML = p.stack.map(function (s, i) {
           return '<span class="stack__item" data-reveal style="--i:' + i + '"><img src="' + esc(s.icon) + '" alt="" />' + esc(s.name) + "</span>";
         }).join("");
 
-        if (p.live) {
-          el("cta").insertAdjacentHTML("afterbegin", '<a href="' + esc(p.live) + '" class="btn btn--sm" target="_blank" rel="noreferrer" style="margin-bottom:10px">Open live site ~&gt;</a>');
-        }
-
         var prev = list[(idx - 1 + list.length) % list.length];
         var next = list[(idx + 1) % list.length];
         el("pager").innerHTML =
-          '<a class="prev" href="project-details.html?project=' + prev.slug + '" data-reveal="left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M20 12H4m0 0l6-6m-6 6l6 6"/></svg><span><small>Previous project</small><strong>' + esc(prev.title) + "</strong></span></a>" +
-          '<a class="next" href="project-details.html?project=' + next.slug + '" data-reveal="right"><span><small>Next project</small><strong>' + esc(next.title) + '</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>';
+          '<a class="prev" href="project-details.html?project=' + prev.slug + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></svg><span><small class="hud">Previous</small><strong>' + esc(prev.title) + "</strong></span></a>" +
+          '<a class="next" href="project-details.html?project=' + next.slug + '"><span><small class="hud">Next</small><strong>' + esc(next.title) + '</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></svg></a>';
       })();
     </script>
-    <script src="assets/js/app.js"></script>
     <script src="assets/js/vendor/gsap.min.js"></script>
     <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
     <script src="assets/js/vendor/lenis.min.js"></script>
-    <script src="assets/js/motion.js"></script>
-    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
